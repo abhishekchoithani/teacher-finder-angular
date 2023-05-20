@@ -1,4 +1,4 @@
-<!-- `<div *ngIf="!isAuthenticated" class="container">
+`<div *ngIf="!isAuthenticated" class="container">
     <div class="form-box">
         <h1 id="title">Teacher Finder</h1>
         
@@ -24,15 +24,8 @@
                 <button type="button" id="SignInBtn" (click)="login(email, password)">Sign In</button>
                 <button type="button" id="SignUpBtn" routerLink="/signup">Sign Up</button>
             </div>
+
+            
        
     </div>
-</div>
-
-<div>
-    <button type="button"  id="SignInBtn"  (click)="logout()" >Logout</button>
-</div> -->
-
-
-<div>
-    <router-outlet></router-outlet>
 </div>

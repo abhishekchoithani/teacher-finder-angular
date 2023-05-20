@@ -1,0 +1,40 @@
+`<div class="container">
+    <div class="form-box">
+        <h1 id="title">Teacher Finder</h1>
+        
+            <div class="input-group">
+            
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" [(ngModel)]="user.email" placeholder="Email Address">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" [(ngModel)]="user.firstName" placeholder="First Name">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" [(ngModel)]="user.lastName" placeholder="Last Name">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" [(ngModel)]="user.password" placeholder="password">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" [(ngModel)]="user.phoneNumber" placeholder="Phone Number">
+                </div>
+
+            </div>
+            <div class="btn-field">
+                <button type="button" id="SignInBtn" (click)="signup(user)">Sign Up</button>
+
+                <button type="button" id="SignInBtn" routerLink="/login">Sign In</button>
+            </div>
+
+    </div>
+</div>

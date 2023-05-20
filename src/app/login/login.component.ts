@@ -1,24 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from './api.service';
-import { GlobalVariables } from './Global-variable';
+import { ApiService } from '../api.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class AppComponent implements OnInit{
-  
+export class LoginComponent implements OnInit {
+
   title = 'teacherfinder';
   email: string = '';
   password: string = '';
   public isAuthenticated: boolean  = false;
 
-  constructor(private apiService: ApiService, private router: Router){}
+  constructor(private apiService: ApiService, private route: Router){}
 
   ngOnInit(): void {
-    //throw new Error('Method not implemented.');
+    if(localStorage.getItem('email')) {
+      alert("user already authenticated");
+       this.route.navigate(['home']);
+    } else {
+      
+    }
   }
 
   login(email: string, password: string) {
@@ -29,7 +33,7 @@ export class AppComponent implements OnInit{
           localStorage.setItem('password', password);
           this.isAuthenticated = true;
 
-          this.router.navigate(['home']);
+          this.route.navigate(['home']);
           
         }, 
         error: err => {
@@ -45,6 +49,5 @@ export class AppComponent implements OnInit{
     this.apiService.logout();
     this.isAuthenticated = false;
   }
-
 
 }
