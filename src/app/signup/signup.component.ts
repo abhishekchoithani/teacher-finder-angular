@@ -18,7 +18,18 @@ export class SignupComponent implements OnInit {
   }
 
   signup(user: User) {
-    this.apiService.signUp(user);
+    this.apiService.signUp(user).subscribe(
+      {
+        next: (value: any) => {
+          alert("SUCCESS: " + value);
+        },
+        error: err => {
+          alert("ERROR: " + err);
+        }
+        
+      }
+
+    );
   
   }
 

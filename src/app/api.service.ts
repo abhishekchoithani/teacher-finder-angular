@@ -9,24 +9,24 @@ import { User } from './model/user';
 export class ApiService {
   constructor(private http: HttpClient) { }
 
+
+
+  logout() {
+    localStorage.removeItem('email');
+    localStorage.removeItem('password');
+  }
+
   login(email: string, password: string) {
     let base64Data = btoa(email + ':' + password);
     let header = this.getRequestOption(base64Data);
     return this.http.get<any>(GlobalVariables.baseUrl + 'login', header);
   }
-
-  logout() {
-    localStorage.removeItem('email');
-          localStorage.removeItem('password');
-  }
-
   
-signUp(user: User) {
-  const headers = { 'content-type': 'application/json'} ;
-  const body=JSON.stringify(user);
-
-    return this.http.get(GlobalVariables.baseUrl + 'signup');
-  }
+  signUp(user: User) {
+    // let base64Data = btoa('Abhishek@gmail.com:1234');
+    // let header = this.getRequestOption(base64Data);
+      return this.http.post<any>(GlobalVariables.baseUrl + 'signup', user);
+    }
 
   getRequestOption(authorization: string) {
     const headers = {
