@@ -14,6 +14,14 @@ import { StudentLoginComponent } from './student-login/student-login.component';
 import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
 import { StudentSignupComponent } from './student-signup/student-signup.component';
 import { TeacherSignupComponent } from './teacher-signup/teacher-signup.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+
+registerLocaleData(en);
 
 
 @NgModule({
@@ -33,9 +41,12 @@ import { TeacherSignupComponent } from './teacher-signup/teacher-signup.componen
     BrowserModule,
     AppRoutingModule,
     FormsModule, 
-    HttpClientModule
+    HttpClientModule, BrowserAnimationsModule,
+    NzButtonModule
   ],
-  providers: [],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
