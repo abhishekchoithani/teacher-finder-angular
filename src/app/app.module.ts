@@ -15,6 +15,7 @@ import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
 import { StudentSignupComponent } from './student-signup/student-signup.component';
 import { TeacherSignupComponent } from './teacher-signup/teacher-signup.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

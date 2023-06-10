@@ -8,6 +8,8 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { StudentSignupComponent } from './student-signup/student-signup.component';
 import { TeacherSignupComponent } from './teacher-signup/teacher-signup.component';
+import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
+import { StudentLoginComponent } from './student-login/student-login.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,10 +17,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'forget-password', component: ForgetPasswordComponent },
   { path: 'welcome', component: WelcomePageComponent},
-  { path: 'student-login', component: WelcomePageComponent},
-  { path: 'teacher-login', component: WelcomePageComponent},
+  { path: 'student-login', component: StudentLoginComponent},
+  { path: 'teacher-login', component: TeacherLoginComponent},
   { path: 'teacher-signup', component: TeacherSignupComponent},
-  { path: 'student-sign', component: StudentSignupComponent},
+  { path: 'student-signup', component: StudentSignupComponent},
   { path: '', component: WelcomePageComponent },
 
 ];

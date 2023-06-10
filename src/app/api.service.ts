@@ -21,21 +21,29 @@ export class ApiService {
     let header = this.getRequestOption(base64Data);
     return this.http.get<any>(GlobalVariables.baseUrl + 'login', header);
   }
-  
+
   signUp(user: User) {
     // let base64Data = btoa('Abhishek@gmail.com:1234');
     // let header = this.getRequestOption(base64Data);
-      return this.http.post<any>(GlobalVariables.baseUrl + 'signup', user);
-    }
+    return this.http.post<any>(GlobalVariables.baseUrl + 'signup', user);
+  }
+
+  teacherSignUp(user: User) {
+    return this.http.post<any>(GlobalVariables.baseUrl + 'teacher-signup', user);
+  }
+
+  studentSignUp(user: User) {
+    return this.http.post<any>(GlobalVariables.baseUrl + 'student-signup', user);
+  }
 
   getRequestOption(authorization: string) {
     const headers = {
-      'Authorization' : 'Basic ' + authorization,
+      'Authorization': 'Basic ' + authorization,
       'Content-Type': 'application/json'
     }
 
     return {
-      headers : new HttpHeaders(headers),
+      headers: new HttpHeaders(headers),
     }
   }
 }
