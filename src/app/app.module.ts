@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClient, HttpClientModule} from  '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
@@ -20,6 +20,12 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
 
 registerLocaleData(en);
 
@@ -35,14 +41,21 @@ registerLocaleData(en);
     StudentLoginComponent,
     TeacherLoginComponent,
     StudentSignupComponent,
-    TeacherSignupComponent
+    TeacherSignupComponent,
+    AboutUsComponent,
+    DashboardComponent,
+    TeacherDashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule, 
     HttpClientModule, BrowserAnimationsModule,
-    NzButtonModule
+    NzButtonModule,
+    NzMenuModule,
+    NzModalModule,
+    ReactiveFormsModule,
+    NzGridModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

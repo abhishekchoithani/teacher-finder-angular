@@ -1,17 +1,18 @@
 <body>
- 
 
-   <div class="bod">
+    <div class="bod">
        <div style="margin-top: 7%;">
            <h1 style="text-align: center;"> Teacher SignUp</h1>
    
-           <form style="margin-left: 38%;">
-               <input type="text" name="" placeholder="username">
-               <input type="email" name="" placeholder="email">
-               <input type="password" name="" placeholder="password">
-               <input type="confirm password   " name="" placeholder="confirm password">
-               <button style="margin-right: 55%; width: 20%; border-radius: 5px; margin-top: 2%;">SignUp</button>
+           <form style="margin-left: 38%;" (ngSubmit)="teacherSignup()">
+               <input type="email" name="user.email" [(ngModel)]="user.email" placeholder="Email" [required]="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+               <input type="text" name="user.firstName" [(ngModel)]="user.firstName" placeholder="First Name">
+               <input type="text" name="user.lastName" [(ngModel)]="user.lastName" placeholder="Last Name">
+               <input type="text" name="user.cnic" [(ngModel)]="user.cnic" placeholder="Cnic Number">
+               <input type="text" name="user.phoneNumber" [(ngModel)]="user.phoneNumber" placeholder="Phone Number">
+               <input type="password" name="user.password" [(ngModel)]="user.password" placeholder="Password">
+               <button type="submit" style="margin-right: 55%; width: 20%; border-radius: 5px; margin-top: 2%;">SignUp</button>
            </form>
        </div>
    </div>
-   </body>
+</body>

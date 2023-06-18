@@ -10,6 +10,8 @@ import { StudentSignupComponent } from './student-signup/student-signup.componen
 import { TeacherSignupComponent } from './teacher-signup/teacher-signup.component';
 import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
 import { StudentLoginComponent } from './student-login/student-login.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -21,6 +23,8 @@ const routes: Routes = [
   { path: 'teacher-login', component: TeacherLoginComponent},
   { path: 'teacher-signup', component: TeacherSignupComponent},
   { path: 'student-signup', component: StudentSignupComponent},
+  { path: 'about-us', component: AboutUsComponent},
+  { path: 'teacher-dashboard', component: TeacherDashboardComponent},
   { path: '', component: WelcomePageComponent },
 
 ];
@@ -30,3 +34,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

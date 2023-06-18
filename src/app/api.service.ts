@@ -14,6 +14,8 @@ export class ApiService {
   logout() {
     localStorage.removeItem('email');
     localStorage.removeItem('password');
+    localStorage.removeItem('role');
+    localStorage.removeItem('isAuthenticated');
   }
 
   login(email: string, password: string) {
@@ -22,9 +24,13 @@ export class ApiService {
     return this.http.get<any>(GlobalVariables.baseUrl + 'login', header);
   }
 
+  teacherLogin(email: string, password: string) {
+    let base64Data = btoa(email + ':' + password);
+    let header = this.getRequestOption(base64Data);
+    return this.http.get<any>(GlobalVariables.baseUrl + 'teacher/login', header);
+  }
+
   signUp(user: User) {
-    // let base64Data = btoa('Abhishek@gmail.com:1234');
-    // let header = this.getRequestOption(base64Data);
     return this.http.post<any>(GlobalVariables.baseUrl + 'signup', user);
   }
 
