@@ -1,18 +1,29 @@
 <body>
+
+    <ul nz-menu nzMode="horizontal" nzTheme="dark" style="height: 60px;">
+        <li nz-menu-item style="margin-right: 0%; float: right;">
+        <span nz-icon nzType="mail"></span>
+        LOGIN
+        <a href="student-login"></a>
+        
+        </li>
+        
+        </ul>
+        
  
 
 <div class="bod">
     <div style="margin-top: 7%;">
         <h1 style="text-align: center;"> Student SignUp</h1>
 
-        <form style="margin-left: 38%;">
-            <input type="email" name="" placeholder="Email">
-            <input type="password" name="" placeholder="Password">
-            <input type="text" name="" placeholder="First Name">
-            <input type="text" name="" placeholder="Last Name">
-            <input type="number " name="" placeholder="Contact Number">
+        <form style="margin-left: 38%;" (ngSubmit)="studentSignup()">
+            <input type="email" name="user.email"[(ngModel)]="user.email" placeholder="Email" [required]="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <input type="password" name="user.password" [(ngModel)]="user.password" placeholder="Password">
+            <input type="text" name="user.firstName" [(ngModel)]="user.firstName" placeholder="First Name">
+            <input type="text" name="user.lastName" [(ngModel)]="user.lastName" placeholder="Last Name">
+            <input type="number " name="user.number" [(ngModel)]="user.phoneNumber" placeholder="Contact Number">
             
-            <button style="margin-right: 55%; width: 20%; border-radius: 5px; margin-top: 2%;">SignUp</button>
+            <button type="submit" style="margin-right: 55%; width: 20%; border-radius: 5px; margin-top: 2%;">SignUp</button>
         </form>
     </div>
 </div>

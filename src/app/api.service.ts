@@ -24,6 +24,12 @@ export class ApiService {
     return this.http.get<any>(GlobalVariables.baseUrl + 'login', header);
   }
 
+  updateTeacher(user: User) {
+    let base64Data = btoa(user.email + ':' + user.password);
+    let header = this.getRequestOption(base64Data);
+    return this.http.put<any>(GlobalVariables.baseUrl + 'teacher', user, header);
+  }
+
   teacherLogin(email: string, password: string) {
     let base64Data = btoa(email + ':' + password);
     let header = this.getRequestOption(base64Data);

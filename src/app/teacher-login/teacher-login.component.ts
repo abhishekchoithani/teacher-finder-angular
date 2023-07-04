@@ -31,6 +31,7 @@ export class TeacherLoginComponent implements OnInit {
           nzOnOk: () => this.route.navigate(['teacher-dashboard']),
           nzOnCancel: () => this.route.navigate(['teacher-dashboard'])
           
+          
         });
 
         

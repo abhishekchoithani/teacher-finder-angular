@@ -11,6 +11,7 @@ import { TeacherSignupComponent } from './teacher-signup/teacher-signup.componen
 import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
 import { StudentLoginComponent } from './student-login/student-login.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
 import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'student-signup', component: StudentSignupComponent},
   { path: 'about-us', component: AboutUsComponent},
   { path: 'teacher-dashboard', component: TeacherDashboardComponent},
+  { path: 'student-dashboard', component: StudentDashboardComponent},
   { path: '', component: WelcomePageComponent },
 
 ];

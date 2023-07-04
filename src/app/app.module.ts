@@ -26,6 +26,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
+import { TestComponent } from './test/test.component';
+import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
 
 registerLocaleData(en);
 
@@ -44,7 +46,9 @@ registerLocaleData(en);
     TeacherSignupComponent,
     AboutUsComponent,
     DashboardComponent,
-    TeacherDashboardComponent
+    TeacherDashboardComponent,
+    TestComponent,
+    StudentDashboardComponent
   ],
   imports: [
     BrowserModule,

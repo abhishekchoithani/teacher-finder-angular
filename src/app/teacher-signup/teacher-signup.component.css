@@ -6,6 +6,14 @@
     
 
 }
+
+div.body{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color:darkcyan
+    
+    }
 body{
     background-color: rgb(110, 149, 136);
     width: 100%;
