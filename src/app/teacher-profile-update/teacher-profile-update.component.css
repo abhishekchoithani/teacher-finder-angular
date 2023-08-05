@@ -32,7 +32,6 @@ height: 100vh;
     height: 150px;
 } */
 
-
 h2{
    margin-left: 50px;
    margin-top: -25px;
@@ -52,9 +51,7 @@ h2{
     font-size: 20px;
 }
 
-div.time{
-    margin-top: 30%;
-}
+
 
 
 
@@ -160,7 +157,7 @@ textarea{
     height: 50px;
     border-color:bisque;
     border-radius: 5px;
-    
+    margin-left: 4px;
 }
 
 .button1{

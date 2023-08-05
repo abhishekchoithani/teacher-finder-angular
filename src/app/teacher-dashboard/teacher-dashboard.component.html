@@ -1,7 +1,7 @@
-  <body>
+<body>
 
 
-<!--   
+    
 <ul nz-menu nzMode="horizontal" nzTheme="dark" style="height: 70px;">
 <li nz-menu-item style="margin-right: 0%; float: right;">
 <span nz-icon nzType="mail"></span>
@@ -10,65 +10,111 @@
  
 </li>
 
+<li nz-menu-item style="margin-right: 1px; float: right;">
+  <span nz-icon nzType="mail"></span>
+    EDIT PROFILE
+  <a routerLink="/teacher-profile-update"></a>
+  </li>
+
+  <li nz-menu-item style="margin-right: 1px; float: right;">
+    <span nz-icon nzType="mail"></span>
+      Add Courses
+    <a routerLink="/teacher-course-update/{{teacherId}}"></a>
+    </li>
+
 </ul>
- -->
 
-   <div id="div1"><div class="side-section">
+
+  <div id="div1">
+    <div class="side-section">
       <div class="left-side">
-        <img src="WhatsApp Image 2023-06-29 at 7.11.27 PM.jpeg" alt="" />
+        <!-- <img src="WhatsApp Image 2023-06-29 at 7.11.27 PM.jpeg" alt="" /> -->
+        <hr/>
 
-        <h2>Abhishek Kumar</h2>
+        <h1>{{teacher.firstName}} {{teacher.lastName}}</h1>
+        <div *ngIf="retrievedImage" style="width: 70%; height: 100px;">
+          <img [src]="retrievedImage">
+      </div>
+
+        <div>    
+          <div class="col-md-6">
+            <input type="file" (change)="onFileChanged($event)">
+        </div>
+        <div class="col-md-6">
+            <input type="button" (click)="onUpload()" value="upload">
+        </div>
         <hr />
 
+        <div class="time">
+        <h3>
+          teacher Availablity time
+        </h3>
+      </div>
+
+      
+         <hr/>
+      <div>
+        <h1>s</h1>
+      </div>
+      <div class="container row">
+          <div class="col-md-12">
+              <div *ngIf=message>{{message}}</div>
+          </div>
+      </div>
+      </div>
+
+
         <div class="textt">
-          <span class="text-1">Rating</span>
-          <span class="side-star"> 5.0  ⭐⭐⭐⭐⭐</span>
+          <!-- <span class="text-1">Gender</span>
+          <span class="side-star"> {{teacher.gender}}</span> -->
           <br /> <br>
           <hr />
-          <span class="text-1">Appoinemnt Today</span>
-          <span class="side-star"> 0 &nbsp; </span>
-          <br> <br> <hr>
-          <span class="text-1">Appoinemnt in May</span>
-          <span class="side-star"> 2 &nbsp; </span>
-          <br> <br> <hr>
-          <span class="text-1">Available</span>
-          <span class="side-star"> <input type="date" name="" id=""> &nbsp; </span>
-          <br>  <hr>
         </div>
       </div>
-    </div></div>
+    </div>
+  </div>  
 
-   
-   <div id="div2">    <div class="text">
 
-    <h4>Description</h4>
-  
-    <textarea name="Description" placeholder="Teacher Description" id="d" cols="30" rows="10"></textarea>
-   </div>
 
-   <div class="phone">
-    <h4>phone number</h4>
-    <input type="text" name="phone" placeholder="Phone Number">
-</div>
+    
 
-<div class="Address">
-  <h4>address</h4>
-  <input type="text" name="text" placeholder="Teachers Address">
-</div>
 
-<div class="email Address">
-  <h4>email address</h4>
-  <input type="text" email="text" placeholder="Email Address">
-</div>
 
-<div class="qualification">
-  <h4>qualification</h4>
-  <input type="text" text="text" name="user.email" [(ngModel)]="user.email" placeholder="Qualification">
-</div>
+  <div id="div2">
 
-<div class="button1">
-<button type="submit">Save</button>
-</div>
- </div>
+    <div class="phone">
+      <h4>Email Id</h4>
+      <input nz-input [disabled]="true" name="email" id="email" cols="30" rows="10" [(ngModel)]="teacher.email"/>
+    </div>
+
+    <div class="text">
+      <h4>Description</h4>
+      <textarea name="Description" [disabled]="true" placeholder="Teacher Description" id="d" cols="30" rows="10" [(ngModel)]="teacher.description"></textarea>
+    </div>
+
+    <div class="phone">
+      <h4>phone number</h4>
+      <input nz-input type="text" [disabled]="true" name="phone" placeholder="Phone Number" [(ngModel)]="teacher.phoneNumber">
+    </div>
+
+    <div class="Address">
+      <h4>address</h4>
+      <input type="text" [disabled]="true" name="address" placeholder="Teachers Address" [(ngModel)]="teacher.address">
+    </div>
+
+    <!-- <div class="email Address">
+      <h4>email address</h4>
+      <input type="text" email="text" placeholder="Email Address" [(ngModel)]="teacher.address">
+    </div> -->
+
+    <div class="qualification">
+      <h4>qualification</h4>
+      <input [disabled]="true" type="text" text="text" name="qualification" [(ngModel)]="teacher.qualification" placeholder="qualification"/>
+    </div>
+
+    <!-- <div >
+      <button (click)="updateTeacher()" class="btn btn-info" style="width: 10%; margin-top: 10px; margin-left: 5px;">Save</button>
+    </div> -->
+  </div>
 
 </body>

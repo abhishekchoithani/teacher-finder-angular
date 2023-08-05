@@ -1,13 +1,8 @@
-interface User {
+export interface Student {
     email: string;
-    // Other properties...
+    id: number;
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
+
   }
-  
-  // Example usage
-  const user: User = {
-    email: 'example@example.com',
-    // Other properties...
-  };
-  
-  // Accessing the 'email' property
-  console.log(user.email);

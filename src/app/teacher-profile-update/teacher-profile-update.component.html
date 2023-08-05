@@ -1,0 +1,40 @@
+<div id="div2">
+
+    <div class="phone">
+      <h4>Email Id</h4>
+      <input nz-input [disabled]="true" name="email" id="email" cols="30" rows="10" [(ngModel)]="teacher.email"/>
+    </div>
+
+    <div class="text">
+      <h4>Description</h4>
+      <textarea name="Description" placeholder="Teacher Description" id="d" cols="30" rows="10" [(ngModel)]="teacher.description"></textarea>
+    </div>
+
+    <div class="phone">
+      <h4>phone number</h4>
+      <input nz-input type="text" name="phone" placeholder="Phone Number" [(ngModel)]="teacher.phoneNumber">
+    </div>
+
+    <div class="Address">
+      <h4>address</h4>
+      <input type="text" name="address" placeholder="Teachers Address" [(ngModel)]="teacher.address">
+    </div>
+
+    <!-- <div class="email Address">
+      <h4>email address</h4>
+      <input type="text" email="text" placeholder="Email Address" [(ngModel)]="teacher.address">
+    </div> -->
+
+    <div class="qualification">
+      <h4>qualification</h4>
+      <input type="text" text="text" name="qualification" [(ngModel)]="teacher.qualification" placeholder="qualification"/>
+    </div>
+
+    <div >
+        <button (click)="back()" class="btn btn-danger" style="width: 10%; margin-top: 10px; margin-left: 5px;">Back</button>
+      </div>
+
+    <div >
+      <button (click)="updateTeacher()" class="btn btn-info" style="width: 10%; margin-top: 10px; margin-left: 5px;">Save</button>
+    </div>
+  </div>

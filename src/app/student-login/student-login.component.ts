@@ -21,9 +21,10 @@ export class StudentLoginComponent implements OnInit {
   
 
   login() {
-    this.apiService.login(this.email, this.password).subscribe(
+    this.apiService.studentLogin(this.email, this.password).subscribe(
       {
         next:(value: any) => {
+          localStorage.setItem('studentId', value.id)
           localStorage.setItem('email', this.email);
           localStorage.setItem('password', this.password);
           localStorage.setItem('role', 'STUDENT');
@@ -46,7 +47,7 @@ export class StudentLoginComponent implements OnInit {
     const modal = this.modalService.success({
       nzTitle: 'Logged In',
       nzContent: 'student logged in successfully',
-      nzOnOk: () => this.route.navigate(['studen-dashboard'])
+      nzOnOk: () => this.route.navigate(['student-dashboard'])
     });
 
     setTimeout(() => {

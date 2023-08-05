@@ -19,6 +19,7 @@ export class TeacherSignupComponent implements OnInit {
   }
 
   teacherSignup() {
+    
     this.apiService.teacherSignUp(this.user).subscribe(
       {
         next: (value: any) => {

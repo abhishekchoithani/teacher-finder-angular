@@ -11,10 +11,14 @@
         
         </ul>
         
-
+      <div>
+        <form>
+        <h1 style="text-align: center;"> Teacher Finder Website </h1>
+    </form>
+    </div>
     <div class="bod">
-       <div style="margin-top: 7%;">
-           <h1 style="text-align: center;"> Teacher SignUp</h1>
+       <div style="margin-top: 0.5%;">
+           <h3 style="text-align: center;"> Teacher SignUp Page</h3>
    
            <form style="margin-left: 38%;" (ngSubmit)="teacherSignup()">
                <input type="email" name="user.email" [(ngModel)]="user.email" placeholder="Email" [required]="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">

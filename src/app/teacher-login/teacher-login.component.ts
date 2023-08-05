@@ -55,6 +55,8 @@ export class TeacherLoginComponent implements OnInit {
     this.apiService.teacherLogin(this.email, this.password).subscribe(
       {
         next:(value: any) => {
+          console.log(value);
+          localStorage.setItem('teacherId', value.id)
           localStorage.setItem('email', this.email);
           localStorage.setItem('password', this.password);
           localStorage.setItem('role', 'TEACHER');
@@ -85,7 +87,7 @@ export class TeacherLoginComponent implements OnInit {
   successModal(): void {
     const modal = this.modalService.success({
       nzTitle: 'Logged In',
-      nzContent: 'user logged in successfully',
+      nzContent: 'teacher logged in successfully',
       nzOnOk: () => this.route.navigate(['teacher-dashboard'])
     });
 

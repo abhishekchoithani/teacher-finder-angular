@@ -1,10 +1,24 @@
 <body>
-
-    <div>
         
-        <div>
-            
-        <input type="text" name="search" placeholder="search">
+<ul nz-menu nzMode="horizontal" nzTheme="dark" style="height: 70px;">
+    <li nz-menu-item style="margin-right: 0%; float: right;">
+    <span nz-icon nzType="mail"></span>
+      LOGOUT
+    <a (click)="logout()"></a>
+     
+    </li>
+    
+    <!-- <li nz-menu-item style="margin-right: 0%; float: right;">
+      <span nz-icon nzType="mail"></span>
+        Edit Profile
+      <a routerLink="/teacher-profile-update"></a>
+      </li> -->
+    
+    </ul>
+    <div>
+        <div class="student">   
+            <h2 style="text-align: left; color: rgb(36, 51, 57);"> Welcome {{student.firstName}} {{student.lastName}}</h2>
+        <input type="text" name="search" style="margin-left: 20px;" placeholder="search">
     </div>
 </div>
 

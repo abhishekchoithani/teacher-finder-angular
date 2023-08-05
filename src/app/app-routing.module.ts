@@ -13,6 +13,8 @@ import { StudentLoginComponent } from './student-login/student-login.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
 import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
+import { TeacherProfileUpdateComponent } from './teacher-profile-update/teacher-profile-update.component';
+import { TeacherCourseUpdateComponent } from './teacher-course-update/teacher-course-update.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -27,6 +29,8 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent},
   { path: 'teacher-dashboard', component: TeacherDashboardComponent},
   { path: 'student-dashboard', component: StudentDashboardComponent},
+  { path: 'teacher-profile-update', component: TeacherProfileUpdateComponent},
+  { path: 'teacher-course-update/:id', component: TeacherCourseUpdateComponent},
   { path: '', component: WelcomePageComponent },
 
 ];

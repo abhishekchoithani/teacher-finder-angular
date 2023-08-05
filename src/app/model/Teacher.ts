@@ -11,5 +11,7 @@ export interface Teacher {
     description: string;
     qualification: string;
     workExperience: number;
+    rating: number;
+    profilePicture: any;
 }
 

@@ -15,7 +15,7 @@
 
 }
 body{
-    background-color: rgb(110, 149, 136);
+    background-color: antiquewhite;
     width: 100%;
     height: 100vh;
 } 
@@ -38,6 +38,6 @@ input{
     }
 
     button{
-        background-color: darkslategray;
+        background-color:  rgb(238, 233, 191);
     }
-
+ 

@@ -50,7 +50,7 @@ export class StudentSignupComponent implements OnInit {
 
   errorModal(): void {
     const modal = this.modalService.error({
-      nzTitle: 'Error occured. Can not sign up teacher'
+      nzTitle: 'Error occured. Can not sign up student'
 
     });    
   }
